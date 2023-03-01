@@ -12,14 +12,16 @@ formEl.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-  localStorage.removeItem(LOCALSTORAGE_KEY);
+
   if (email.value.trim() !== '' || message.value.trim() !== '') {
     const parsedData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
     console.log(parsedData);
+
+    evt.currentTarget.reset();
+    localStorage.removeItem(LOCALSTORAGE_KEY);
   } else {
     alert('Введите валидные данные');
   }
-  evt.currentTarget.reset();
 }
 
 function onFormInput(evt) {
@@ -29,7 +31,7 @@ function onFormInput(evt) {
 
   localStorage.setItem(
     LOCALSTORAGE_KEY,
-    JSON.stringify({ email: email.value.trim(), message: message.value.trim() })
+    JSON.stringify({ email: email.value, message: message.value })
   );
 }
 function localStorageCheck() {

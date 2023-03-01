@@ -45,9 +45,14 @@ img {
   display: block;
   max-width: 100%;
 }
-
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
 iframe {
-  border-radius: 5%;
+  border-radius: 15px;
+  overflow: hidden;
 }
 @keyframes gradient {
   0% {

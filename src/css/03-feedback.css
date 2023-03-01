@@ -1,13 +1,12 @@
 .feedback-form {
   display: flex;
   flex-direction: column;
-  max-width: 480px;
+  width: 480px;
   padding: 12px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  margin: 0 auto;
-  vertical-align: center;
+  border-radius: 7%;
 }
 
 .feedback-form label {
