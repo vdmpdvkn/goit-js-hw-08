@@ -1,0 +1,2 @@
+.feedback-form{width:480px;background-color:#fff;border:1px solid rgba(0,0,0,.12);border-radius:7%;flex-direction:column;padding:12px;display:flex}.feedback-form label{flex-direction:column;margin-bottom:16px;display:flex}.feedback-form button{font:inherit;cursor:pointer;padding:8px 12px}input,textarea{font:inherit;border:1px solid gray;outline:1px solid rgba(0,0,0,0);padding:8px;transition:border-color .25s ease-in}textarea{resize:none}input:hover,input:focus,textarea:hover,textarea:focus{border-color:#00f}
+/*# sourceMappingURL=03-feedback.a779a022.css.map */
