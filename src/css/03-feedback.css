@@ -6,6 +6,8 @@
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  margin: 0 auto;
+  vertical-align: center;
 }
 
 .feedback-form label {
@@ -24,8 +26,18 @@ input,
 textarea {
   padding: 8px;
   font: inherit;
+  border: 1px solid grey;
+  transition: border-color 250ms ease-in;
+  outline: 1px solid transparent;
 }
 
 textarea {
   resize: none;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  border-color: blue;
 }

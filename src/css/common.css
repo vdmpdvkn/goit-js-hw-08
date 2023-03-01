@@ -46,6 +46,9 @@ img {
   max-width: 100%;
 }
 
+iframe {
+  border-radius: 5%;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
