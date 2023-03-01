@@ -19,26 +19,50 @@ body {
 p {
   margin-left: 20px;
 }
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+}
 p > a,
 li > a {
-  background: linear-gradient(
-    to bottom,
-    var(--mainColor) 0%,
-    var(--mainColor) 100%
-  );
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 3px 3px;
-  color: #000;
+  margin: auto;
+  padding: 1rem 1.25rem;
+  font-family: sans-serif;
+  font-size: 1.5rem;
   text-decoration: none;
+  color: black;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  z-index: 1;
 }
+
+p > a::after,
+li > a::after {
+  content: '';
+  display: block;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 1.25rem;
+  left: 1.25rem;
+  background-color: #2d2d2d;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transform-origin: bottom center;
+  z-index: -1;
+}
+
 p > a:hover,
 li > a:hover {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-  background-position: 0 100%;
-  background-size: auto 6px;
-  background-repeat: repeat-x;
-  text-decoration: none;
+  color: #fafafa;
+}
+p > a:hover::after,
+li > a:hover::after {
+  right: 0;
+  left: 0;
+  height: 100%;
 }
 
 img {
