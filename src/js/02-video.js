@@ -15,9 +15,7 @@ function setTimeStamp(data) {
 }
 
 window.addEventListener('keydown', evt => {
-  if (evt.key === 'Space') {
-    player.pause();
+  if (evt.code === 'Space') {
+    player.pause(); // works after you'll start video
   }
 });
-
-// мне кажется мой способ каким-то читерским, слишком мало кода как то)
