@@ -13,7 +13,7 @@ formEl.addEventListener('submit', onFormSubmit);
 function onFormSubmit(evt) {
   evt.preventDefault();
 
-  if (email.value.trim() !== '' || message.value.trim() !== '') {
+  if (email.value.trim() !== '' && message.value.trim() !== '') {
     const parsedData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
     console.log(parsedData);
 
