@@ -26,6 +26,7 @@ ul {
   gap: 30px;
   list-style: none;
 }
+
 p > a,
 li > a {
   margin: auto;
